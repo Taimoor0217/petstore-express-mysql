@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		body {
+		    background: url(https://images.unsplash.com/photo-1415369629372-26f2fe60c467);
+		    background-size: cover;
+		    background-position: center; 
+		}
+		html {
+		    width: 100%;
+		    height: 100%;
+		    font-family: "Lato";
+		    color: white;
+
+		}
+		h1,h2 {
+		    color: white;
+			font-weight: 700;
+			font-size: 4em;
+			text-align: center;
+		    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+		                 0px 8px 13px rgba(0,0,0,0.1),
+		                 0px 18px 23px rgba(0,0,0,0.1);
+		}
+		/*.btn{
+			background-color: #803f16;
+			border-color: #803f16;
+			padding: 10px;
+		}*/
+		td,th{
+			width: 130px;
+			/*margin-top: 2px;*/
+			/*margin-right: 2px;*/
+			table-layout: fixed,
+			padding-top: 3%;
+			display: inline-block; /* this has been added */
+		    /*border-radius: 5px;*/
+			height:80px;
+			background-color: white;
+		    color: black;
+		    border: 1px solid black;
+			text-align: center;
+			font-weight: bold;
+			float: left
+		}
+		th{
+			
+			padding-top: 2%;
+		    border: 1px solid white;
+		    color: white;
+		    background-color: black;
+		}
+		td{
+			padding-top: 2%
+		}
+
+		body{
+			zoom:1.4;
+			/*background-color : grey;*/
+		}
+		img{
+			opacity: 1;
+		}
+		#content{
+			text-align: center;
+		    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+		                 0px 8px 13px rgba(0,0,0,0.1),
+		                 0px 18px 23px rgba(0,0,0,0.1);
+		}
+	</style>
+	<title>
+			Customers
+	</title>
+<head>
+		<div class="container">
+			<h2> <center><i>FOLLOWING ARE THE DETAILS</i></center></h2>
+			<center>
+				<a href="/" class="btn btn-default btn-lg" id="content"> HomePage </a>
+				<a href="/admin" class="btn btn-default btn-lg" id="content"> Admins Panel </a>
+			</center>
+		</div>
+			<br>
+			<br>
+			<br>
+				<center>
+				<table >
+					<% if(obj[0]){ %>
+					<% x = Object.keys(obj[0]) %>
+						<%x.forEach (h =>{%>
+						<th><i><%= h %></i></th>
+						<%})%>
+					<%} %>	
+					<% obj.forEach( o =>{ %>
+						<!-- <h3> -->
+							<tr>
+								<% Object.keys(o).forEach( k =>{ %>
+									<td><i><%= o[k] %> </i></td> 
+								<% }) %>
+							</tr>
+						<!-- </h3> -->
+					<% }) %>
+				</table>
+				</center>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type="javascript" href = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<style type="text/css">
+		#elem{
+			width: 100px;
+			height:100px;
+			border-left: 3px solid white;
+			border-bottom: 3px solid white;
+			border-top: 3px solid white;
+			border-right: 3px solid white;
+			float: left
+		}
+		body {
+		    background: url(https://images.unsplash.com/photo-1415369629372-26f2fe60c467);
+		    background-size: cover;
+		    background-position: center;
+		}
+		html {
+		    width: 100%;
+		    height: 100%;
+		    font-family: "Lato";
+		    color: white;
+		}
+		h1 {
+		    color: white;
+			font-weight: 700;
+			font-size: 5em;
+			text-align: center;
+		    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+		                 0px 8px 13px rgba(0,0,0,0.1),
+		                 0px 18px 23px rgba(0,0,0,0.1);
+		}
+		h4,h2{
+		    color: white;
+		}
+		#content{
+			text-align: center;
+		    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+		                 0px 8px 13px rgba(0,0,0,0.1),
+		                 0px 18px 23px rgba(0,0,0,0.1);
+		}
+		form{
+			width: 40%
+		}
+	</style>
+	<title>
+		Admins' Panel
+	</title>
+</head>
+<body>
+	<div class = "container">
+		<br>
+			<center>
+			<h1> <i>WELCOME</i></h1>
+			</center>
+		<br>
+		<br>
+		<!-- <div>
+	    <div id="z" tabindex="0">test </div>
+		</div> -->
+		<div class="bg-image">
+			
+		<div class="container">
+			<center>
+				<div>
+					<a href="/Customer" id="content" class="btn btn-default btn-lg">Show Customers</a>
+					<a href="/Sales" id="content" class="btn btn-default btn-lg">View Sales</a>
+					<a href="/Pets" id="content" class="btn btn-default btn-lg">Show Pets</a>
+					<a href="/Medicine" id="content" class="btn btn-default btn-lg">Show Medicine</a>
+					<a href="/Supplier" id="content" class="btn btn-default btn-lg">Show Supplier</a>
+					<a href="/Food" id="content" class="btn btn-default btn-lg">Show Food</a>
+					<a href="/Cage" id="content" class="btn btn-default btn-lg">Show Cage</a>
+					<!-- <a href="/Veterinay_Staff" id="content" class="btn btn-default btn-lg">Veterinary Staff</a> -->
+				</div>
+				<br>
+				<div>
+					<a href="/q1" id="content" class="btn btn-default btn-lg">Query 1</a>
+					<a href="/q2" id="content" class="btn btn-default btn-lg">Query 2</a>
+					<a href="/q3" id="content" class="btn btn-default btn-lg">Query 3</a>
+					<a href="/q4" id="content" class="btn btn-default btn-lg">Query 4</a>
+					<a href="/q5" id="content" class="btn btn-default btn-lg">Query 5</a>
+				<br>
+				<h2>QUERY 6</h2>
+				<form action="/Q6" method="POST">
+					<input class= "form-control" type="text" name="ID" placeholder="Customer ID" required = "true">
+					<input class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Query 6">
+				</form>
+				<br>
+				<h2>QUERY 7</h2>
+				<form action="/Q7" method="POST">
+					<input class= "form-control" type="text" name="ID" placeholder="Sale NO" required = "true">
+					<input class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Query 7">
+				</form>
+				<br>
+				<h2>QUERY 8</h2>
+				<form action="/Q8" method="POST">
+					<input class= "form-control" type="text" name="ID" placeholder="Supplier ID" required = "true">
+					<input class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Query 8">
+				</form>
+				<br>
+				<h2>QUERY 9</h2>
+				<form action="/Q9" method="POST">
+					<input class= "form-control" type="text" name="r1" placeholder="Start Value" required = "true">
+					<input class= "form-control" type="text" name="r2" placeholder="End Value">
+					<input class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Query 9">
+				</form>
+				<br>
+				<h2>QUERY 10</h2>
+				<form action="/Q10" method="POST">
+					<input class= "form-control" type="text" name="food" placeholder="Food Name" required = "true">
+					<input class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Query 10">
+				</form>
+
+				</div>
+
+			</center>
+		</div>
+		<br>
+		<br>
+		<div class="container">
+				<input onclick="$('#new-med')[0].focus({preventScroll:false})" id="content" class= "btn btn-inverse btn-default btn-block"type="Submit" value="ADD Medicine">
+				<input onclick="$('#new-cust')[0].focus({preventScroll:false})" id="content" class= "btn btn-inverse btn-default btn-block"type="Submit" value="ADD Customer">
+				<input onclick="$('#new-cstaff')[0].focus({preventScroll:false})" id="content" class= "btn btn-inverse btn-default btn-block"type="Submit" value="ADD Cleanining Staff">
+				<input onclick="$('#new-supp')[0].focus({preventScroll:false})" id="content" class= "btn btn-inverse btn-default btn-block"type="Submit" value="ADD Supplier">
+				<input onclick="$('#new-vet')[0].focus({preventScroll:false})" id="content" class= "btn btn-inverse btn-default btn-block"type="Submit" value="ADD Veterinary Staff">
+				<input onclick="$('#new-pet')[0].focus({preventScroll:false})" id="content" class= "btn btn-inverse btn-default btn-block"type="Submit" value="ADD New Pet">
+				<input onclick="$('#new-cash')[0].focus({preventScroll:false})" id="content" class= "btn btn-inverse btn-default btn-block"type="Submit" value="ADD New Cashier">
+				<input onclick="$('#new-food')[0].focus({preventScroll:false})" id="content" class= "btn btn-inverse btn-default btn-block"type="Submit" value="ADD Food">
+		</div>
+		<br>
+		<br>
+		<br>
+ 
+			<!-- <div class="container"> -->
+				<!-- ADDING A CUSTOMER -->
+				<div class="container">
+					<center>
+					<h1><i>Update a table Below</i></h1>
+					<form action="/update_table" method="POST">
+					<input required="true" class= "form-control" type="text" name="Table" placeholder="Table Name">
+					<input required="true" class= "form-control" type="text" name="old_Attribute" placeholder="Old Attribute Value">
+					<input required="true" class= "form-control" type="text" name="new_Attribute" placeholder="New Attribute Value">
+						<h4> 			Where </h4>
+					<input required="true" class= "form-control" type="text" name="What" placeholder="What">
+						<h4>			=		</h4>
+					<input required="true" class= "form-control" type="text" name="Equal_to" placeholder="Equal_to">
+					<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Update">
+					</form>
+					</center>
+
+				<br>
+				<br>
+					<center>
+					<h1><i>Delete a Table's Attribute</i></h1>
+					<form action="/del-table" method="POST">
+					<input required="true" class= "form-control" type="text" name="table" placeholder="Table Name">
+					<h4><i> WHERE </i></h4>
+					<input required="true" class= "form-control" type="text" name="Attribute" placeholder="Attribute">
+					<h4><i> = </i></h4>
+					<input required="true" class= "form-control" type="text" name="Val" placeholder="Value">
+					<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="DELETE ATTRIBUTE">
+					</form>
+					</center>
+
+				<br>
+				<br>
+					<center>
+					<h1><i>Add a New Customer Below</i></h1>
+					<div id="new-cust" tabindex="0">
+						<form action="/customer_new" method="POST">
+						<input required="true" class= "form-control" type="text" name="Customer_Name" placeholder="Name">
+						<input required="true" class= "form-control" type="text" name="Customer_ID" placeholder="ID">
+						<input required="true" class= "form-control" type="text" name="Gender" placeholder="Gender">
+						<input required="true" class= "form-control" type="text" name="Address" placeholder="Address">
+						<input required="true" class= "form-control" type="tel"  pattern="[0-9]{6}" name="Contact" placeholder="Contact No">
+						<span class="note">Format: 123456</span>
+						<input required="true" class= "form-control" type="Email" name="Email" placeholder="Email">
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add Customer">
+						</form>
+					</div>
+					</center>
+				<br>
+				<br>
+				<!-- INSERTING A PET -->
+					<center>
+					<h1><i>Add a New Pet Below</i></h1>
+					<div id="new-pet" tabindex="0">
+						<form action="/pet-new" method="POST">
+						<input required="true" class= "form-control" type="text" name="Pet_ID" placeholder="ID">
+						<input required="true" class= "form-control" type="text" name="Type" placeholder="Type">
+						<input required="true" class= "form-control" type="text" name="Color" placeholder="Color">
+						<input required="true" class= "form-control" type="text" name="Gender" placeholder="Gender">
+						<input required="true" class= "form-control" type="text" name="Age" placeholder="Age">
+						<input required="true" class= "form-control" type="text" name="Food" placeholder="Food">
+						<input required="true" class= "form-control" type="text" name="Cage_ID" placeholder="Cage ID">
+						<input required="true" class= "form-control" type="text" name="Native_Region" placeholder="Native Region">
+						<input required="true" class= "form-control" type="text" name="Medicine_name" placeholder="Medicine Name">
+						<input required="true" class= "form-control" type="text" name="Price" placeholder="Price">
+						<input required="true" class= "form-control" type="text" name="Supplier_ID" placeholder="Supplier ID">
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add Pet">
+						</form>
+					</div>
+					</center>
+				<br>
+				<br>
+					<center>
+					<h1><i>Add a New Supplier Below</i></h1>
+					<div id="new-supp" tabindex="0">
+						<form action="/supp-new" method="POST">
+						<input required="true" class= "form-control" type="text" name="Supplier_ID" placeholder="ID">
+						<input required="true" class= "form-control" type="text" name="Supplier_name" placeholder="Name">
+						<input required="true" class= "form-control" type="text" name="Supplier_Type" placeholder="Type">
+						<input required="true" class= "form-control" type="text" name="Country" placeholder="Country">
+						<input required="true" class= "form-control" type="tel"  pattern="[0-9]{6}" name="Contact" placeholder="Contact">
+						<span class="note">Format: 123456</span>
+						<input required="true" class= "form-control" type="Email" name="Email" placeholder="Email">
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add Supplier">
+						</form>
+					</div>
+					</center>
+				<br>
+				<br>
+					<center>
+					<h1><i>Add Veterinary Staff Below</i></h1>
+					<div id="new-vet" tabindex="0">
+						<form action="/vet-new" method="POST">
+						<input required="true" class= "form-control" type="text" name="CNIC" placeholder="CNIC">
+						<input required="true" class= "form-control" type="text" name="Name" placeholder="Name">
+						<input required="true" class= "form-control" type="text" name="Salary" placeholder="Salary">
+						<input required="true" class= "form-control" type="text" name="Duty_Timings" placeholder="Duty Timings">
+						<input required="true" class= "form-control" type="text" name="Spec" placeholder="Specialization">
+						<input required="true" class= "form-control" type="text" name="Address" placeholder="Address">
+						<input required="true" class= "form-control" type="tel"  pattern="[0-9]{6}" name="Contact" placeholder="Contact">
+						<span class="note">Format: 123456</span>
+						<input required="true" class= "form-control" type="Email" name="Email" placeholder="Email">
+						
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add Vet Staff">
+						</form>
+						
+					</div>
+					</center>
+				<br>
+				<br>
+					<center>
+					<h1><i>Add a New Cage Below</i></h1>
+					<div id="new-pet" tabindex="0">
+						<form action="/cage-new" method="POST">
+						<input required="true" class= "form-control" type="text" name="Cage_ID" placeholder="Cage ID">
+						<input required="true" class= "form-control" type="text" name="Living_area" placeholder="Living Area">
+						<input required="true" class= "form-control" type="text" name="Temperature" placeholder="Temperature">
+						<input required="true" class= "form-control" type="text" name="Capacity" placeholder="Capacity">
+
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add New Cage">
+						</form>
+						
+					</div>
+				<br>
+				<br>
+					<center>
+					<h1><i>Add New Cashier Below</i></h1>
+					<div id="new-cash" tabindex="0">
+						<form action="/cashier-new" method="POST">
+						<input required="true" class= "form-control" type="text" name="CNIC" placeholder="CNIC">
+						<input required="true" class= "form-control" type="text" name="Cashier_Name" placeholder="Name">
+						<input required="true" class= "form-control" type="text" name="Salary" placeholder="Salary">
+						<input required="true" class= "form-control" type="text" name="Duty_Timings" placeholder="Duty Timings">
+						<input required="true" class= "form-control" type="text" name="Ranks" placeholder="Ranks">
+						<input required="true" class= "form-control" type="text" name="Address" placeholder="Address">
+						<input required="true" class= "form-control" type="tel" name= "Contact" pattern="[0-9]{6}" placeholder="Contact">
+						<span class="note">Format: 123456</span>
+						<input required="true" class= "form-control" type="Email" name="Email" placeholder="Email">
+						
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add Cashier">
+						</form>
+					</div>
+					</center>
+					<br>
+					<br>
+					</center>
+
+					<center>
+					<h1><i>Add Cleaning Staff Below</i></h1>
+					<div id="new-cstaff" tabindex="0">
+						<form action="/cstaff-new" method="POST">
+						<input required="true" class= "form-control" type="text" name="CNIC" placeholder="CNIC">
+						<input required="true" class= "form-control" type="text" name="C_Name" placeholder="Name">
+						<input required="true" class= "form-control" type="text" name="Salary" placeholder="Salary">
+						<input required="true" class= "form-control" type="text" name="Duty_Timings" placeholder="Duty Timings">
+						<input required="true" class= "form-control" type="text" name="Duty_Assigned" placeholder="Duty Assigned">
+						<input required="true" class= "form-control" type="text" name="Address" placeholder="Address">
+						<input required="true" class= "form-control" type="tel"  pattern="[0-9]{6}" placeholder="Contact">
+						<span class="note">Format: 123456</span>
+						<input required="true" class= "form-control" type="Email" name="Email" placeholder="Email">
+						
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add Cleaning Staff">
+						</form>
+					</div>
+					</center>
+				<br>
+				<br>
+					<center>
+					<h1><i>Add a New Food Below</i></h1>
+					<div id="new-food" tabindex="0">
+						<form action="/food-new" method="POST">
+						<input required="true" class= "form-control" type="text" name="Food_Name" placeholder="Food Name">
+						<input required="true" class= "form-control" type="text" name="Stock_left" placeholder="Stock Left">
+						<input required="true" class= "form-control" type="text" name="Expiry_Date" placeholder="Expiry Date">
+						<input required="true" class= "form-control" type="text" name="Price_Kg" placeholder="Price Per Kilogram">
+
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add Food">
+						</form>
+					</div>
+					</center>
+				<br>
+				<br>
+					<center>
+					<h1><i>Add Medicine Below</i></h1>
+					<div id="new-med" tabindex="0">
+						<form action="/med-new" method="POST">
+						<input required="true" class= "form-control" type="text" name="Name" placeholder="Medicine Name">
+						<input required="true" class= "form-control" type="text" name="Stock_left" placeholder="Stock Left">
+						<input required="true" class= "form-control" type="text" name="M_type" placeholder="Medicine Type">
+
+						<input required="true" class= "btn btn-inverse btn-primary btn-block"type="Submit" value="Add Medicine">
+						</form>
+					</div>
+					</center>
+
+				</div>
+
+
+
+				
+			<!-- </div> -->
+	</div>
+		<!-- <a href="/admin/customers" class="btn btn-primary btn-large">Add Customer</a> -->
+		<!-- <a href="/admin/customers" class="btn btn-primary btn-large">Show Customers</a> -->
+
+	</div>
+
+	</div>
+</body>
+</html>
